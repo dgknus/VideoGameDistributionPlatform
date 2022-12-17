@@ -165,7 +165,7 @@ public class LoginPage {
 				else {
 					MainPageDev mpd = new MainPageDev();
 					mpd.getFrame().setVisible(true);
-					mpd.setCurrentUser(currentUser);
+					mpd.setCurrentUser(currentDev);
 					frame.dispose();
 				}
 			}

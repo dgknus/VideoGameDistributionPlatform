@@ -130,12 +130,12 @@ public class WalletPage {
 		depositButton.setBounds(160, 301, 89, 23);
 		frame.getContentPane().add(depositButton);
 		
-		JLabel lblStore = new JLabel("STORE");
-		lblStore.setHorizontalAlignment(SwingConstants.CENTER);
-		lblStore.setForeground(Color.WHITE);
-		lblStore.setFont(new Font("Elephant", Font.PLAIN, 40));
-		lblStore.setBounds(10, 11, 614, 70);
-		frame.getContentPane().add(lblStore);
+		JLabel lblWallet = new JLabel("WALLET");
+		lblWallet.setHorizontalAlignment(SwingConstants.CENTER);
+		lblWallet.setForeground(Color.WHITE);
+		lblWallet.setFont(new Font("Elephant", Font.PLAIN, 40));
+		lblWallet.setBounds(10, 11, 614, 70);
+		frame.getContentPane().add(lblWallet);
 		
 		JLabel lblCurrentBalance = new JLabel("Current Balance: ");
 		lblCurrentBalance.setHorizontalAlignment(SwingConstants.LEFT);

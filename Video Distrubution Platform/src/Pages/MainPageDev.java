@@ -15,7 +15,8 @@ public class MainPageDev {
 
 	private JFrame frame;
 	
-	private User currentUser;
+	private Developer currentUser;
+	MainPageDev mp = this;
 
 	/**
 	 * Launch the application.
@@ -79,6 +80,13 @@ public class MainPageDev {
 		frame.getContentPane().add(lblMainPage);
 		
 		JButton publishedButton = new JButton("MY PUBLISHED GAMES");
+		publishedButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				PublishedGamesPage pgp = new PublishedGamesPage(mp, currentUser);
+				pgp.getFrame().setVisible(true);
+				frame.dispose();
+			}
+		});
 		publishedButton.setForeground(Color.BLACK);
 		publishedButton.setBackground(Color.WHITE);
 		publishedButton.setBounds(107, 190, 417, 45);
@@ -87,6 +95,9 @@ public class MainPageDev {
 		JButton newGameButton = new JButton("ADD NEW GAME");
 		newGameButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				AddNewGamePage angp = new AddNewGamePage(mp);
+				angp.getFrame().setVisible(true);
+				frame.dispose();
 			}
 		});
 		newGameButton.setForeground(Color.BLACK);
@@ -103,11 +114,11 @@ public class MainPageDev {
 		this.frame = frame;
 	}
 
-	public User getCurrentUser() {
+	public Developer getCurrentUser() {
 		return currentUser;
 	}
 
-	public void setCurrentUser(User currentUser) {
+	public void setCurrentUser(Developer currentUser) {
 		this.currentUser = currentUser;
 	}
 

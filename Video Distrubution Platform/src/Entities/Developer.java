@@ -3,7 +3,7 @@ package Entities;
 import java.util.ArrayList;
 
 public class Developer extends User{
-	//SAA
+	
 	String name;
 	
 	public Developer(String id, String pw, String name) {
